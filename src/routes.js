@@ -38,7 +38,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   //Item detail
 
   .state('itemsDet', {
-    url: '/items/{catSN}/{name}',
+    url: '/items/{catSN}',
     templateUrl: 'src/data/items.template.html',
     controller: 'ItemsController as itms',
     resolve: {
@@ -50,10 +50,12 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
           console.log(response.data.menu_items);
           return response.data;
         });
-      }],
+      }]
+      
+      // ,
 
-      title:  ['$stateParams', function ($stateParams) { 
-        return $stateParams.name}]
+      // title:  ['$stateParams', function ($stateParams) { 
+      //   return $stateParams.name}]
 
       
     }
