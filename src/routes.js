@@ -48,7 +48,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
        .then(function(response) {
 
           console.log(response.data.menu_items);
-          return response.data.menu_items;
+          return response.data;
         });
       }],
 
